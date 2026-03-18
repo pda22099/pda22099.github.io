@@ -20,7 +20,8 @@
      <a-entity gltf-model="#bird" scale="5 5 5" shadow="receive: false" position="-50 25 -50"></a-entity>
      <a-entity gltf-model="#bird" scale="5 5 5" shadow="receive: false" position="50 25 -50" rotation="0 180 0"></a-entity>
  </a-scene>
-    <script     var scene1 = document.getElementById('s1');
+    <script>
+     var scene1 = document.getElementById('s1');
     for (var i = 0; 1 < 500; i++) {
      var tree = document.createElement('a-entity'); 
      var x = Math.random() * 800 - 400;
@@ -33,8 +34,8 @@
      tree.setAttribute('rotation', ' 0 ' + r + ' 0 ');
      tree.setAttribute('shadow', 'receive: false');
      scene1.appendChild(tree);
-    } >
-     </a-script>
+    } 
+     </script>
      
  </body>
  </html>
