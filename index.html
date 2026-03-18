@@ -11,33 +11,13 @@
    <a-light type="ambient" intensity="0.25"></a-light>
    <a-plane color="#2a1c0e" height="1000" width="1000" rotation="-90 0 0" metalness="0" shadow></a-plane>
   </a-scene>
+    <a-asset-item id="tree" src="tree.gltf"></a-asset-item>
+     <a-asset-item id="bird" src="bird.gltf"></a-asset-item>
+     <a-asset-item id="bee" src="bee.gltf"></a-asset-item>
+     <a-asset-item id="witch" src="witch.glb"></a-asset-item>
+    <audio id="hawk" src="Hawk Call 2x-SoundBible.com-1697796838.mp3"></audio>
+   </a-assets>
+    <a-entity gltf-model="#bird" scale="5 5 5" shadow="receive: false" position="-50 25 -50"></a-entity>
+     <a-entity gltf-model="#bird" scale="5 5 5" shadow="receive: false" position="50 25 -50" rotation="0 180 0"></a-entity>
   </body>
- 
-
-
-
-
-
-    
-     <a-scene id="s1" background="color: cadetblue" cursor="rayOrigin: mouse" physics>
-      <a-plane static-body height="100" width="100" rotation="-90 0 0"></a-plane>
-      <a-camera><a-cursor fuse="true" fuse-timeout="1000"></a-cursor></a-camera>
-      <a-entity cursor raycaster="showLine: true" oculus-touch-controls="hand: right"></a-entity>
-       </a-scene>
-<script>
- var scene1 = document.getElementById('s1');
- for (var i= 0; i < 9; i++) {
-  var e= i % 2, o = !e;
-  for (var j= 0; j < 5; j++) {
-   var box= document.createElement('a-box');
-   box.setAttribute('dynamic-body', '');
-     box.setAttribute('removing', '');
-     box.setAttribute('position', e * (j - 2)  + ' ' + (i + 0.5) + ' ' + (-12 - (j - 2) * o));
-     box.setAttribute('color', 'firebrick');
-     box.setAttribute('scale', (4 * o + 1) + ' 1 ' + (4 * e + 1));
-   scene1.appendChild(box);
-    }
- }
-</script>
-   </body>
  </html>
